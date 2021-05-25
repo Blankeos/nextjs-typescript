@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -13,4 +17,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.navbar {
+  @apply bg-black text-white h-20 flex items-center;
+}
+
+.navbar ul {
+  @apply flex space-x-5;
+}
+
+.navbar li {
+  @apply cursor-pointer;
 }
