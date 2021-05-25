@@ -1,3 +1,22 @@
+# 📝 NextJS BlogSite
+
+A really simple blogsite with NextJS and Typescript. I also installed TailwindCSS.
+Doing this just to try out the basic concepts in NextJS and show that I can use them like page routes, data-fetching, head component, image, link, routers, etc.
+
+## 📔 My Notes
+
+NextJS has two forms of [pre-rendering](https://nextjs.org/docs/basic-features/data-fetching):
+
+- Static-Site Generation (SSG)
+
+  - getStaticProps()
+  - getStaticPaths()
+
+- Server-Side Rendering (SSR)
+  - getServerSideProps()
+
+<hr />
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
