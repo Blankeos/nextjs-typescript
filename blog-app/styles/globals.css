@@ -19,10 +19,6 @@ a {
   box-sizing: border-box;
 }
 
-.navbar {
-  @apply bg-black text-white h-20 flex items-center;
-}
-
 .navbar ul {
   @apply flex space-x-5;
 }
