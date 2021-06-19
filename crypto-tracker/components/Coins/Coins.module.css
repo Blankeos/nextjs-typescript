@@ -1,6 +1,7 @@
 .coin_container {
   display: flex;
   justify-content: center;
+  color: #2e2e2e;
 }
 
 .coin_row {
@@ -16,6 +17,7 @@
 
 .coin_row:hover {
   background: #171718;
+  color: #eeeee4;
 }
 
 .coin {

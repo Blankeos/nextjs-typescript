@@ -10,7 +10,7 @@ const Layout = ({ children, title = "Carlo's Crypto Tracker" }: any) => {
       </Head>
       <header className="header">
         <Link href="/" passHref>
-          <a></a>
+          <a>Crypto Tracker</a>
         </Link>
       </header>
       <main>{children}</main>
