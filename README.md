@@ -4,7 +4,7 @@
 
 ## 📖 Contents
 
-3 basic NextJS projects using Typescript.
+4 basic NextJS projects using Typescript.
 
 1. [ ] Blog App (SSG) - Work In Progress ✍
 2. [ ] Todo List (Uses Redux/Mobx and probably SSR) - Not Yet Started 😢
