@@ -3,6 +3,8 @@
 A really simple blogsite with NextJS and Typescript. I also installed TailwindCSS.
 Doing this just to try out the basic concepts in NextJS and show that I can use them like page routes, data-fetching, head component, image, link, routers, etc.
 
+More importantly, I'm doing this to understand how to parse markdown content into blog content. Making `.md` files as the source of truth for the content for my blog.
+
 ## 📔 My Notes
 
 NextJS has two forms of [pre-rendering](https://nextjs.org/docs/basic-features/data-fetching):
