@@ -6,7 +6,7 @@ const Nav = () => {
     <nav className="navbar bg-black text-white h-20 flex items-center">
       <div className="max-w-4xl w-full mx-auto flex justify-between px-5">
         <Link href="/">
-          <a>Carlo's Blog</a>
+          <a className="font-bold">Carlo's Blog</a>
         </Link>
         <ul className="">
           <Link href="/">
