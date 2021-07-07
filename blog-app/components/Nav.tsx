@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import Container from "./Container";
 
 const Nav = () => {
   return (
     <nav className="navbar bg-black text-white h-20 flex items-center">
-      <div className="max-w-4xl w-full mx-auto flex justify-between px-5">
+      <Container className=" w-full flex justify-between items-center">
         <Link href="/">
-          <a className="font-bold">Carlo's Blog</a>
+          <a className="font-bold text-xl">🤪 Carlo's Blog</a>
         </Link>
         <ul className="">
           <Link href="/">
@@ -16,7 +17,7 @@ const Nav = () => {
             <li>About</li>
           </Link>
         </ul>
-      </div>
+      </Container>
     </nav>
   );
 };

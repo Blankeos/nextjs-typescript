@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Container from "../components/Container";
+import ArticleLink from "../components/Home/ArticleLink";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-3 gap-3">
           <LatestPosts />
           <TopPosts />
         </div>
@@ -21,9 +22,28 @@ export default function Home() {
 }
 
 function LatestPosts() {
-  return <div>Latest Posts</div>;
+  return (
+    <div className="bg-white rounded-md p-5 md:col-span-2 col-span-3">
+      <h2 className="font-semibold text-xl mb-2">⌛ Latest Posts</h2>
+      <div className="flex flex-col space-y-2">
+        <ArticleLink title={"Test"} shortDesc={"woops"} />
+        <ArticleLink title={"Test"} shortDesc={"woops"} />
+        <ArticleLink title={"Test"} shortDesc={"woops"} />
+      </div>
+    </div>
+  );
 }
 
 function TopPosts() {
-  return <div>Top Posts</div>;
+  return (
+    <div className="md:col-span-1 col-span-3 order-first md:order-last">
+      <div className="bg-white rounded-md p-5">
+        <h2 className="font-semibold text-xl mb-2">🥇 Top Posts</h2>
+        <div className="flex flex-col space-y-2">
+          <ArticleLink title={"Test"} shortDesc={"woops"} />
+          <ArticleLink title={"Test"} shortDesc={"woops"} />
+        </div>
+      </div>
+    </div>
+  );
 }
