@@ -36,9 +36,18 @@ function LatestPosts() {
     <div className="bg-white rounded-md p-5 md:col-span-2 col-span-3 shadow-md">
       <h2 className="font-semibold text-xl mb-2">⌛ Latest Posts</h2>
       <div className="flex flex-col space-y-2">
-        <ArticleLink title={"Test"} shortDesc={"woops"} />
-        <ArticleLink title={"Test"} shortDesc={"woops"} />
-        <ArticleLink title={"Test"} shortDesc={"woops"} />
+        <ArticleLink
+          title={"Pokemon Is Cool!"}
+          shortDesc={"Yeser I love pokemon"}
+        />
+        <ArticleLink
+          title={"I like turtles!"}
+          shortDesc={"They're so majestic man. Here are 3 reasons why..."}
+        />
+        <ArticleLink
+          title={"WTF is Boku no Pico?!?"}
+          shortDesc={"How can I unwatch this crap bro!"}
+        />
       </div>
     </div>
   );
@@ -50,8 +59,14 @@ function TopPosts() {
       <div className="bg-white rounded-md p-5 shadow-md">
         <h2 className="font-semibold text-xl mb-2">🥇 Top Posts</h2>
         <div className="flex flex-col space-y-2">
-          <ArticleLink title={"Test"} shortDesc={"woops"} />
-          <ArticleLink title={"Test"} shortDesc={"woops"} />
+          <ArticleLink
+            title={"Pokemon Is Cool!"}
+            shortDesc={"Yeser I love pokemon"}
+          />
+          <ArticleLink
+            title={"WTF is Boku no Pico?!?"}
+            shortDesc={"How can I unwatch this..."}
+          />
         </div>
       </div>
     </div>
