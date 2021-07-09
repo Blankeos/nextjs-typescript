@@ -12,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
+        <Featured />
         <div className="grid grid-cols-3 gap-3">
           <LatestPosts />
           <TopPosts />
@@ -21,9 +22,18 @@ export default function Home() {
   );
 }
 
+function Featured() {
+  return (
+    <div className="bg-white rounded-md shadow-md mb-5 overflow-hidden">
+      <h2 className="font-semibold text-xl p-5">✨ Featured</h2>
+      <div className="bg-black w-full h-52"></div>
+    </div>
+  );
+}
+
 function LatestPosts() {
   return (
-    <div className="bg-white rounded-md p-5 md:col-span-2 col-span-3">
+    <div className="bg-white rounded-md p-5 md:col-span-2 col-span-3 shadow-md">
       <h2 className="font-semibold text-xl mb-2">⌛ Latest Posts</h2>
       <div className="flex flex-col space-y-2">
         <ArticleLink title={"Test"} shortDesc={"woops"} />
@@ -37,7 +47,7 @@ function LatestPosts() {
 function TopPosts() {
   return (
     <div className="md:col-span-1 col-span-3 order-first md:order-last">
-      <div className="bg-white rounded-md p-5">
+      <div className="bg-white rounded-md p-5 shadow-md">
         <h2 className="font-semibold text-xl mb-2">🥇 Top Posts</h2>
         <div className="flex flex-col space-y-2">
           <ArticleLink title={"Test"} shortDesc={"woops"} />
