@@ -1,5 +1,7 @@
 # 📝 NextJS BlogSite
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c72ad397-8b01-4f6c-a8fd-0e6b68a00ef5/deploy-status)](https://app.netlify.com/sites/carlo-nextblog-practice/deploys)
+
 A really simple blogsite with NextJS and Typescript. I also installed TailwindCSS.
 Doing this just to try out the basic concepts in NextJS and show that I can use them like page routes, data-fetching, head component, image, link, routers, etc.
 
