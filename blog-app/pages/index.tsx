@@ -2,8 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Container from "../components/Container";
 import ArticleLink from "../components/Home/ArticleLink";
-
-export default function Home() {
+import { getAllPosts } from "../services/fetchData";
+import { GetStaticProps } from "next";
+export default function Home({ allPosts }: any) {
   return (
     <>
       <Head>
@@ -14,7 +15,7 @@ export default function Home() {
       <Container>
         <Featured />
         <div className="grid grid-cols-3 gap-3">
-          <LatestPosts />
+          <LatestPosts allPosts={allPosts} />
           <TopPosts />
         </div>
       </Container>
@@ -31,23 +32,22 @@ function Featured() {
   );
 }
 
-function LatestPosts() {
+function LatestPosts({ allPosts }: any) {
   return (
     <div className="bg-white rounded-md p-5 md:col-span-2 col-span-3 shadow-md">
       <h2 className="font-semibold text-xl mb-2">⌛ Latest Posts</h2>
       <div className="flex flex-col space-y-2">
-        <ArticleLink
-          title={"Pokemon Is Cool!"}
-          shortDesc={"Yeser I love pokemon"}
-        />
-        <ArticleLink
-          title={"I like turtles!"}
-          shortDesc={"They're so majestic man. Here are 3 reasons why..."}
-        />
-        <ArticleLink
-          title={"WTF is Boku no Pico?!?"}
-          shortDesc={"How can I unwatch this crap bro!"}
-        />
+        {allPosts &&
+          allPosts.map((post: any) => {
+            return (
+              <ArticleLink
+                title={post.data.title}
+                shortDesc={post.data.shortDesc}
+                link={`/post/${post.slug}`}
+                dateString={post.data.date}
+              />
+            );
+          })}
       </div>
     </div>
   );
@@ -62,13 +62,20 @@ function TopPosts() {
           <ArticleLink
             title={"Pokemon Is Cool!"}
             shortDesc={"Yeser I love pokemon"}
-          />
-          <ArticleLink
-            title={"WTF is Boku no Pico?!?"}
-            shortDesc={"How can I unwatch this..."}
+            link="post/pokemon-is-cool"
           />
         </div>
       </div>
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPosts = getAllPosts();
+  console.log(allPosts);
+  return {
+    props: {
+      allPosts: allPosts,
+    },
+  };
+};
