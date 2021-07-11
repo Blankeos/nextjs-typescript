@@ -5,7 +5,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      transform: ["active", "group-hover"],
+      translate: ["active", "group-hover"],
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
