@@ -6,7 +6,7 @@ interface Props {
   image?: string;
   title: string;
   shortDesc?: string;
-  dateString: string;
+  dateString?: string;
 }
 
 const ArticleLink: React.FC<Props> = ({
