@@ -4,7 +4,7 @@ import Container from "./Container";
 
 const Nav = () => {
   return (
-    <nav className="navbar bg-black text-white h-20 flex items-center">
+    <nav className="navbar bg-black text-white h-20 flex items-center top-0 sticky">
       <Container className=" w-full flex justify-between items-center">
         <Link href="/">
           <a className="font-bold text-xl">🤪 Carlo's Blog</a>

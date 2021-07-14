@@ -41,6 +41,7 @@ function LatestPosts({ allPosts }: any) {
           allPosts.map((post: any) => {
             return (
               <ArticleLink
+                key={post.slug}
                 title={post.data.title}
                 shortDesc={post.data.shortDesc}
                 link={`/post/${post.slug}`}
@@ -72,7 +73,6 @@ function TopPosts() {
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPosts = getAllPosts();
-  console.log(allPosts);
   return {
     props: {
       allPosts: allPosts,
