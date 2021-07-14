@@ -9,9 +9,16 @@ import { getAllPosts } from "../../services/fetchData";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
+import Head from "next/head";
+
 const Post = (props: any) => {
   return (
     <>
+      <Head>
+        <title>Carlo's NextJS Blog | {props.title}</title>
+        <meta name="description" content={props.shortDesc} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="bg-gray-600 h-48">Feature Image</div>
       <Container>
         <div className="flex flex-col space-y-3 my-10">
