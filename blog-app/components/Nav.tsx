@@ -22,7 +22,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="navbar text-white h-20 flex items-center top-0 sticky">
+    <nav className="navbar text-white h-20 flex items-center top-0 sticky z-50">
       <div className="relative w-full h-full">
         <div
           className={`absolute bg-black w-full h-full ${
@@ -30,7 +30,7 @@ const Nav = () => {
             "bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 border-b border-gray-200"
           }`}
         ></div>
-        <Container className="absolute w-full h-full flex justify-between items-center">
+        <Container className="relative w-full h-full flex justify-between items-center">
           <Link href="/">
             <a className="font-bold text-xl">🤪 Carlo's Blog</a>
           </Link>
