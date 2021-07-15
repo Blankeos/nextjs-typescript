@@ -35,7 +35,7 @@ function Featured() {
 function LatestPosts({ allPosts }: any) {
   return (
     <div className="bg-white rounded-md p-5 md:col-span-2 col-span-3 shadow-md">
-      <h2 className="font-semibold text-xl mb-2">⌛ Latest Posts</h2>
+      <h2 className="font-semibold text-xl mb-4">⌛ Latest Posts</h2>
       <div className="flex flex-col space-y-2">
         {allPosts &&
           allPosts.map((post: any) => {
@@ -58,7 +58,7 @@ function TopPosts() {
   return (
     <div className="md:col-span-1 col-span-3 order-first md:order-last">
       <div className="bg-white rounded-md p-5 shadow-md">
-        <h2 className="font-semibold text-xl mb-2">🥇 Top Posts</h2>
+        <h2 className="font-semibold text-xl mb-4">🥇 Top Posts</h2>
         <div className="flex flex-col space-y-2">
           <ArticleLink
             title={"Pokemon Is Cool!"}

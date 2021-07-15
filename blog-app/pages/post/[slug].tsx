@@ -20,7 +20,7 @@ const Post = (props: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-gray-600 h-48">Feature Image</div>
-      <Container>
+      <Container className="pb-10">
         <div className="flex flex-col space-y-3 my-10">
           <h1 className="text-4xl font-semibold">{props.title}</h1>
           <p className="text-sm text-gray-500">
