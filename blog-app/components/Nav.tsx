@@ -8,10 +8,8 @@ const Nav = () => {
   function listener() {
     if (window.scrollY > 80) {
       setNavIsGlass(true);
-      console.log("true");
     } else {
       setNavIsGlass(false);
-      console.log("false");
     }
   }
   useEffect(() => {
@@ -31,9 +29,23 @@ const Nav = () => {
           }`}
         ></div>
         <Container className="relative w-full h-full flex justify-between items-center">
-          <Link href="/">
-            <a className="font-bold text-xl">🤪 Carlo's Blog</a>
-          </Link>
+          <motion.span
+            initial={{ opacity: 0, y: -50 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.5,
+                duration: 0.8,
+                type: "spring",
+                stiffness: 120,
+              },
+            }}
+          >
+            <Link href="/">
+              <a className="font-bold text-xl">🤪 Carlo's Blog</a>
+            </Link>
+          </motion.span>
           <ul className="">
             <NavLinkItem href="/">Home</NavLinkItem>
             <NavLinkItem href="/about">About</NavLinkItem>
