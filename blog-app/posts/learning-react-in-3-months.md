@@ -2,6 +2,7 @@
 title: "😲 Learning React in 3 Months??"
 date: "2021-07-12T06:30"
 shortDesc: "I just started learning web dev recently..."
+featureImage: "https://codeit.mk/dam/jcr:90b6162d-80d2-412b-adaf-90a3ee9fdd35/react-JS-image.jpg"
 ---
 
 ### It has been about 3 months since I started learning React...

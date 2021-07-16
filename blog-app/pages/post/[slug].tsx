@@ -19,7 +19,12 @@ const Post = (props: any) => {
         <meta name="description" content={props.shortDesc} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-gray-600 h-48">Feature Image</div>
+      <div className="bg-gray-600 w-full h-56 overflow-hidden">
+        <img
+          className="w-full h-full object-cover object-center"
+          src={props.featureImage && props.featureImage}
+        />
+      </div>
       <Container className="pb-10">
         <div className="flex flex-col space-y-3 my-10">
           <h1 className="text-4xl font-semibold">{props.title}</h1>
