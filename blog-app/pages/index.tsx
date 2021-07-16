@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import Container from "../components/Container";
 import ArticleLink from "../components/Home/ArticleLink";
@@ -13,7 +14,7 @@ export default function Home({ allPosts }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <Featured />
+        <Featured post={allPosts[0]} />
         <div className="grid grid-cols-3 gap-3">
           <LatestPosts allPosts={allPosts} />
           <TopPosts />
@@ -23,12 +24,28 @@ export default function Home({ allPosts }: any) {
   );
 }
 
-function Featured() {
+function Featured({ post }: any) {
   return (
-    <div className="bg-white rounded-md shadow-md mb-5 overflow-hidden">
-      <h2 className="font-semibold text-xl p-5">✨ Featured</h2>
-      <div className="bg-black w-full h-52"></div>
-    </div>
+    <Link href={post && post.slug ? `/post/${post.slug}` : "/"}>
+      <a>
+        <div className="bg-white rounded-md shadow-md mb-5 overflow-hidden">
+          <h2 className="font-semibold text-xl p-5">✨ Featured</h2>
+          <div className="relative bg-black w-full h-52 overflow-hidden">
+            <img
+              src={post && post.data.featureImage && post.data.featureImage}
+              className="absolute object-cover object-center w-full h-full"
+            />
+            <div className="absolute w-full h-full bg-black opacity-40"></div>
+            <div className="relative flex flex-col space-y-3 px-5 pt-10 text-white">
+              <h3 className="text-2xl font-medium">
+                {post && post.data.title}
+              </h3>
+              <p>{post && post.data.shortDesc}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </Link>
   );
 }
 
